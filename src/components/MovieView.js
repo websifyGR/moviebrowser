@@ -20,7 +20,7 @@ const MovieView = () => {
         setMovieDetails(data);
         setIsLoading(false);
         
-        //console.log('Poster path: '+data.poster_path)
+         //console.log('Poster path: '+data.poster_path)
       });
   }, [id]);
 
