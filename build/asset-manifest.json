@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/movies-api/static/css/main.31bf06fa.css",
+    "main.js": "/movies-api/static/js/main.42e55829.js",
+    "static/js/787.7b64073a.chunk.js": "/movies-api/static/js/787.7b64073a.chunk.js",
+    "static/media/logo_websify_whale.png": "/movies-api/static/media/logo_websify_whale.aacb14a277f1eb6bd576.png",
+    "static/media/image_no_image.jpg": "/movies-api/static/media/image_no_image.740f79f143bc5759cbd6.jpg",
+    "index.html": "/movies-api/index.html",
+    "main.31bf06fa.css.map": "/movies-api/static/css/main.31bf06fa.css.map",
+    "main.42e55829.js.map": "/movies-api/static/js/main.42e55829.js.map",
+    "787.7b64073a.chunk.js.map": "/movies-api/static/js/787.7b64073a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31bf06fa.css",
+    "static/js/main.42e55829.js"
+  ]
+}
