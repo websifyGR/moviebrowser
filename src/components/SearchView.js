@@ -63,7 +63,7 @@ const SearchView = ({ keyword, searchResults }) => {
     return <MovieCard movie={obj} key={i} />
   })
 
-     //console.log('results length: '+resultsHtml.length); 
+  //console.log('results length: '+resultsHtml.length); 
 
   return (
     <>
