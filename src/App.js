@@ -33,11 +33,11 @@ function App() {
       <SearchInput searchText={searchText} setSearchText={setSearchText} />
       <Switch>
         <Route path="/" exact>
-          <Home />
+           <Home />
         </Route>
         <Route path="/about" component={AboutView} />
         <Route path="/search">
-          <SearchView keyword={searchText} searchResults={searchResults} />
+           <SearchView keyword={searchText} searchResults={searchResults} />
         </Route>
         <Route path="/movies/:id" component={MovieView} />
         <Route path='*' component={Home}/>
