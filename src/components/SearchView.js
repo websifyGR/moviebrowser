@@ -4,13 +4,13 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Hero from "./Hero";
 import imageNoimage from "../assets/images/image_no_image.jpg";
 import WebsifyLogo from "../assets/images/logo_websify_whale.png";
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 //import { Link }  from 'react-router-dom';
 import ModalPopupView from './ModalPopupView';
 
 const MovieCard = ({ movie }) => {
   const posterUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-  const detailUrl = `/movies/${movie.id}`
+  const detailUrl = `/movie/${movie.id}`
   return (
 
      <div className="col">
@@ -32,9 +32,9 @@ const MovieCard = ({ movie }) => {
         }
         
         <div className="card-body">
-          
+          <Link to={detailUrl}>
             <h5 className="card-title">{movie.original_title}</h5>
-            
+            </Link>
         </div>
         <div className="card-footer">
           <p>{movie.overview.slice(0, 117)}...</p>
