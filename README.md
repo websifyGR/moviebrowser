@@ -1,5 +1,5 @@
 > # websify.gr-movies-api 
- >> ### `test it on` [websifyGR](https://websify.gr/movies-api/)
+ >> ### `test it on` [websifyGR](https://websify.gr/movies/)
  
 > ## REACT.js
 >> ### `consuming data from `  [tmdb.org](https://www.themoviedb.org/) 
@@ -27,7 +27,7 @@
 
 ```mermaid
 graph LR
-A[https://websify.gr/movies-api] -- GET --> B[(tmdb.org)]
+A[https://websify.gr/movies] -- GET --> B[(tmdb.org)]
  B -- response --> D{movies-api JSX} 
  D --> E(Search View)
  D --> F(Movie Details View)
