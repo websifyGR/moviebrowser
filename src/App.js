@@ -26,13 +26,15 @@ function App() {
     }
   }, [searchText])
 
+
   return (
     <div>
       <Navbar />
       <SearchInput searchText={searchText} setSearchText={setSearchText} />
       <Switch>
-        <Route path="/" component={Home}/>
- 
+        <Route path="/" exact>
+          <Home />
+        </Route>
         <Route path="/about" component={AboutView} />
         <Route path="/search">
           <SearchView keyword={searchText} searchResults={searchResults} />
