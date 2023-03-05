@@ -39,8 +39,9 @@ export default function ModalPopupView({link,titlos,movieid,linktype}) {
     //const modalA = useRef(null);
     //console.log(modalA.current);
 
-    //const url = new URL(link)
-    //console.log(url)
+    //const url = new URL(window.location.href)
+    //console.log(url.href)
+    
     //console.log(window.location.href)
     //console.log(window.location.pathname.slice(0,7))
     //console.log(link.slice(0,7))

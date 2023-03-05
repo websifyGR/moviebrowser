@@ -10,7 +10,7 @@ import ModalPopupView from './ModalPopupView';
 
 const MovieCard = ({ movie }) => {
   const posterUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-  const detailUrl = `/movie/${movie.id}`
+  const detailUrl = `https://websify.gr/movie/${movie.id}`
   return (
 
      <div className="col">
