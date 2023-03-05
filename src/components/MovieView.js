@@ -21,6 +21,8 @@ const MovieView = () => {
         setIsLoading(false);
         
            //console.log('Poster path: '+data.poster_path)
+           //console.log(window.location.pathname.slice(0,7))
+           //console.log(window.location.hostname)
       });
   }, [id]);
 

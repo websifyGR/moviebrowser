@@ -1,5 +1,6 @@
 import React from 'react';
 import "./App.css";
+//import { useState, useEffect, useRef } from 'react';
 import { useState, useEffect } from 'react';
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -7,13 +8,21 @@ import AboutView from "./components/AboutView";
 import SearchView from './components/SearchView';
 import MovieView from './components/MovieView';
 import SearchInput from "./components/SearchInput";
+
+
+//import ModalPopupView from './components/ModalPopupView';
 //import NotFound from "./components/NotFound";
 import { Switch, Route } from "react-router-dom";
+import { useCookies } from "react-cookie";
 
 function App() {
-
   const [searchResults, setSearchResults] = useState([]);
   const [searchText, setSearchText] = useState('');
+  //const modalA = useRef(null);
+  
+  const [cookies] = useCookies(["modal"]);
+
+
 
   useEffect(() => {
     if(searchText) {
@@ -23,14 +32,21 @@ function App() {
           setSearchResults(data.results)
         })
         
+        
+
     }
   }, [searchText])
 
+ // console.log(modalA.current);
 
   return (
     <div>
+      { cookies.modal !== "100" &&
       <Navbar />
+      }
+      { cookies.modal !== "100" &&
       <SearchInput searchText={searchText} setSearchText={setSearchText} />
+      }
       <Switch>
         <Route path="/" exact>
           <Home />

@@ -1,52 +1,58 @@
 import React from 'react';
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+//import { Button } from 'react-bootstrap'
 import Hero from "./Hero";
 import imageNoimage from "../assets/images/image_no_image.jpg";
 import WebsifyLogo from "../assets/images/logo_websify_whale.png";
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 //import { Link }  from 'react-router-dom';
+import ModalPopupView from './ModalPopupView';
 
 const MovieCard = ({ movie }) => {
   const posterUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
   const detailUrl = `/movies/${movie.id}`
   return (
 
-     <div class="col">
+     <div className="col">
   
       <div className="card h-100">
        
         {
           movie.poster_path && 
-            <Link to={detailUrl}>   
+              
               <img src={posterUrl} className="card-img-top" alt={movie.original_title} />
-            </Link>
+            
         }
        
         {
           !movie.poster_path &&
-             <Link to={detailUrl}>  
+             
                <img src={imageNoimage} className="card-img-top" alt={movie.original_title} />
-             </Link>               
+                          
         }
         
         <div className="card-body">
-          <Link to={detailUrl}><h5 className="card-title">{movie.original_title}</h5></Link>
+          
+            <h5 className="card-title">{movie.original_title}</h5>
+            
         </div>
         <div className="card-footer">
           <p>{movie.overview.slice(0, 117)}...</p>
 
          { 
            movie.release_date &&
-           <button type="button" class="btn btn-danger">{movie.release_date.slice(0, 4)}</button> 
+           <button type="button" className="btn btn-danger">{movie.release_date.slice(0, 4)}</button> 
          }
          { 
            !movie.release_date &&
-           <button type="button" class="btn btn-danger">????</button> 
-         }         
+           <button type="button" className="btn btn-danger">????</button> 
+         }        
           
           &nbsp;&nbsp;&nbsp;
-          <Link to={detailUrl} className="btn btn-sm btn-outline-dark">δείτε λεπτομέρειες</Link>
-              
-      </div>
+          
+           
+          <ModalPopupView linktype="button" link={detailUrl} titlos={movie.original_title} movieid={movie.id}/>
+        </div>
       
       </div>
       
