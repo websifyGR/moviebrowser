@@ -2,14 +2,22 @@
 
 # dependencies
 /node_modules
+/public
 /.pnp
-.pnp.js
+.editorconfig
+.gitattributes
+.gitignore
+.pnp.cjs
+package-lock.json
+package.json
 
 # testing
 /coverage
 
 # production
 #/build
+
+#/src
 
 # misc
 .DS_Store
