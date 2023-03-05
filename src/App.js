@@ -32,9 +32,8 @@ function App() {
       <Navbar />
       <SearchInput searchText={searchText} setSearchText={setSearchText} />
       <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
+        <Route path="/" component={Home}/>
+ 
         <Route path="/about" component={AboutView} />
         <Route path="/search">
           <SearchView keyword={searchText} searchResults={searchResults} />
